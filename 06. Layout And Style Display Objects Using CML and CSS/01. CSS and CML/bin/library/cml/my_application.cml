@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cml css="library/css/my_styles.css" tuio="false" simulator="false">
+	
+	<Graphic id="background"/>
+	<Text id="caption" >
+		<p>"I have tried to express the idea that the cafe is a place where one can ruin oneself, go mad, or commit a crime."<br /> ...Van Gogh writing on The Night Cafe.</p>
+	</Text>
+	<Image id="image" src="library/assets/Vincent_Willem_van_Gogh_076.jpg" />	
+	
+</cml>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cml tuio="false" simulator="false">
+	
+	<TouchContainer id="touchContainer" x="200" y="200" rotation="-45" dimensionsTo="image" mouseChildren="false" disableAffineTransform="false" disableNativeTransform="false">
+		<Image id="image" src="library/assets/wb0.jpg"/>
+		<GestureList>
+			<Gesture ref="n-drag" gestureOn="true"/>
+			<Gesture ref="n-scale" gestureOn="true"/>
+			<Gesture ref="n-rotate" gestureOn="true"/>
+		</GestureList>
+	</TouchContainer>
+
+	<TouchContainer id="touchContainer2" x="400" y="400" rotation="45" dimensionsTo="image2" mouseChildren="false" disableAffineTransform="false" disableNativeTransform="false">
+		<Image id="image2" src="library/assets/wb1.jpg"/>
+		<GestureList>
+			<Gesture ref="n-drag" gestureOn="true"/>
+			<Gesture ref="n-rotate" gestureOn="true"/>
+			<Gesture ref="n-scale" gestureOn="true"/>
+		</GestureList>
+	</TouchContainer>
+
+	
+	<DebugKit displayOn="true" displayAlwaysOn="false" displayRadius="300">
+		<DebugLayer type="point_shapes" displayOn="true"/>
+		<DebugLayer type="cluster_circle" displayOn="true"/>
+		<DebugLayer type="cluster_box" displayOn="true"/>
+		<DebugLayer type="cluster_center" displayOn="true"/>
+		<DebugLayer type="cluster_web" displayOn="true"/>
+		<DebugLayer type="cluster_rotation" displayOn="true"/>
+	</DebugKit>
+	
+</cml>
