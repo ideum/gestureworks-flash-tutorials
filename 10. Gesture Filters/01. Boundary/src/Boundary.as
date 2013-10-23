@@ -38,7 +38,7 @@ package
 			
 			// add events 
 			touchSprite.nativeTransform = true;
-			touchSprite.gestureList = {"drag":true, "scale":true};
+			touchSprite.gestureList = {"n-drag":true, "n-scale":true};
 		}
 	
 	}

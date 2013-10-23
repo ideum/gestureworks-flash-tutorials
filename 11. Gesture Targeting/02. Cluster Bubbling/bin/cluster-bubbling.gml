@@ -2,7 +2,8 @@
 <GestureMarkupLanguage>
 <Gesture_set>
 				
-	<Gesture id="n-drag" type="drag">
+	<!-- assigned to parent only -->
+	<Gesture id="parent-drag" type="drag">
 		<match>
 			<action>
 				<initial>
@@ -18,13 +19,7 @@
 					<property id="drag_dy" result="dy"/>
 				</returns>
 			</algorithm>
-		</analysis>	
-		<processing>
-			<boundary_filter>
-				<property ref="drag_dx" active="true" boundary_min="100" boundary_max="1100"/>
-				<property ref="drag_dy" active="true" boundary_min="100" boundary_max="550"/>
-			</boundary_filter>
-		</processing>												
+		</analysis>													
 		<mapping>
 			<update dispatch_type="continuous">
 				<gesture_event type="drag">
@@ -35,7 +30,8 @@
 		</mapping>
 	</Gesture>
 	
-	<Gesture id="n-scale" type="scale">		
+	<!-- assigned to child only -->
+	<Gesture id="child-scale" type="scale">
 		<match>
 			<action>
 				<initial>
@@ -52,12 +48,6 @@
 				</returns>
 			</algorithm>
 		</analysis>	
-		<processing>
-			<boundary_filter>
-				<property ref="scale_dsx" active="true" boundary_min="1" boundary_max="2.5"/>
-				<property ref="scale_dsy" active="true" boundary_min="1" boundary_max="2.5"/>
-			</boundary_filter>
-		</processing>		
 		<mapping>
 			<update dispatch_type="continuous">
 				<gesture_event type="scale">
@@ -66,7 +56,7 @@
 				</gesture_event>
 			</update>
 		</mapping>
-	</Gesture>	
+	</Gesture>
 					
 </Gesture_set>				
 </GestureMarkupLanguage>
