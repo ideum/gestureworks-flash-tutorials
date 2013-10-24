@@ -3,7 +3,7 @@
 <Gesture_set>
 				
 	<!-- assigned to parent only -->
-	<Gesture id="parent-drag" type="drag">
+	<Gesture id="n-drag" type="drag">
 		<match>
 			<action>
 				<initial>
@@ -30,29 +30,32 @@
 		</mapping>
 	</Gesture>
 	
-	<!-- assigned to child only -->
-	<Gesture id="child-scale" type="scale">
+	<Gesture id="n-tap" type="tap">
 		<match>
 			<action>
 				<initial>
-					<cluster point_number="0" point_number_min="2" point_number_max="10"/>
+					<point event_duration_max="10" translation_max="10"/>
+					<cluster point_number="0" point_number_min="1" point_number_max="10"/>
+					<event touch_event="gwTouchEnd"/>
 				</initial>
 			</action>
-		</match>
+		</match>	
 		<analysis>
-			<algorithm class="kinemetric" type="continuous">
-				<library module="scale"/>
+			<algorithm class="temporalmetric" type="discrete">
+				<library module="tap"/>
 				<returns>
-					<property id="scale_dsx" result="ds"/>
-					<property id="scale_dsy" result="ds"/>
+					<property id="tap_x" result="x"/>
+					<property id="tap_y" result="y"/>
+					<property id="tap_n" result="n"/>
 				</returns>
 			</algorithm>
 		</analysis>	
 		<mapping>
-			<update dispatch_type="continuous">
-				<gesture_event type="scale">
-					<property ref="scale_dsx" target="scaleX"/>
-					<property ref="scale_dsy" target="scaleY"/>
+			<update dispatch_type="discrete" dispatch_mode="batch" dispatch_interval="10">
+				<gesture_event  type="tap">
+					<property ref="tap_x"/>
+					<property ref="tap_y"/>
+					<property ref="tap_n"/>
 				</gesture_event>
 			</update>
 		</mapping>
