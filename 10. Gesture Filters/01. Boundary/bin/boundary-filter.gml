@@ -54,8 +54,8 @@
 		</analysis>	
 		<processing>
 			<boundary_filter>
-				<property ref="scale_dsx" active="true" boundary_min="1" boundary_max="2.5"/>
-				<property ref="scale_dsy" active="true" boundary_min="1" boundary_max="2.5"/>
+				<property ref="scale_dsx" active="true" boundary_min="1" boundary_max="1.5"/>
+				<property ref="scale_dsy" active="true" boundary_min="1" boundary_max="1.5"/>
 			</boundary_filter>
 		</processing>		
 		<mapping>

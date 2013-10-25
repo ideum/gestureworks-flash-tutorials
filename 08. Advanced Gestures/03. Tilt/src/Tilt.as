@@ -4,7 +4,9 @@ package
 	import com.gestureworks.core.TouchSprite;
 	import com.gestureworks.events.GWGestureEvent;
 	import com.gestureworks.utils.ExampleTemplate;
+	import flash.display.Loader;
 	import flash.geom.ColorTransform;
+	import flash.net.URLRequest;
 	
 	[SWF(width="1280",height="720",backgroundColor="0x000000",frameRate="60")]
 	
@@ -22,14 +24,16 @@ package
 			// create a touchable sprite 
 			var touchSprite:TouchSprite = new TouchSprite();
 			
-			// draw a simple graphic
-			touchSprite.graphics.beginFill(0xFF0000);
-			touchSprite.graphics.drawRect(-250, -250, 500, 500);
-			touchSprite.graphics.endFill();
+			// add a bitmap image to the touch sprite
+			var loader:Loader = new Loader();
+			loader.load(new URLRequest("../../../assets/gwLogo.png"));
+			loader.x = -200;
+			loader.y = -200;
+			touchSprite.addChild(loader);
 			
 			// align graphic
-			touchSprite.x = ((stage.stageWidth) / 2) + 225
-			touchSprite.y = ((stage.stageHeight) / 2);
+			touchSprite.x = stage.stageWidth / 2;
+			touchSprite.y = stage.stageHeight / 2;
 			
 			// add touch sprite to display list 
 			addChild(touchSprite);

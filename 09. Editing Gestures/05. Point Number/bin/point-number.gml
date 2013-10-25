@@ -32,12 +32,12 @@
 		</Gesture>	
 		
 		<!-- when "point_number" is not zero, the number of points must be equal to the set value -->
-		<Gesture id="2-finger-drag" type="drag">
+		<Gesture id="3-finger-drag" type="drag">
 			<comment></comment>
 			<match>
 				<action>
 					<initial>
-						<cluster point_number="2" point_number_min="1" point_number_max="10"/>
+						<cluster point_number="3" point_number_min="1" point_number_max="10"/>
 					</initial>
 				</action>
 			</match>	

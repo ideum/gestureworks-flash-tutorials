@@ -2,10 +2,7 @@ package
 {
 	import com.gestureworks.core.GestureWorks;
 	import com.gestureworks.core.TouchSprite;
-	import com.gestureworks.events.GWGestureEvent;
-	import com.gestureworks.utils.FrameRate;
 	import flash.display.Loader;
-	import flash.display.Sprite;
 	import flash.net.URLRequest;
 	
 	[SWF(width="1280",height="720",backgroundColor="0x000000",frameRate="60")]
@@ -21,69 +18,78 @@ package
 		override protected function gestureworksInit():void
 		{							
 			//bottom container
-			var ts1:TouchSprite = new TouchSprite()	
-			ts1.graphics.beginFill(0x222222,1);
-			ts1.graphics.drawRect(0, 0, 1200, 800);
-			ts1.x = 400;
-			ts1.scaleX = 0.4;
-			ts1.scaleY = 0.4;
-			ts1.rotation = 20;
-			ts1.touchChildren = true;
-			ts1.nativeTransform = true			
-			ts1.gestureList = { "n-drag":true, "n-scale":true, "n-rotate":true};			
-			addChild(ts1);	
+			var b_container:TouchSprite = new TouchSprite()	
+			b_container.graphics.beginFill(0x222222,1);
+			b_container.graphics.drawRect(0, 0, 1200, 800);
+			b_container.x = 500;
+			b_container.y = 150;
+			b_container.scaleX = 0.4;
+			b_container.scaleY = 0.4;
+			b_container.rotation = 20;
+			b_container.mouseChildren = true;
+			b_container.nativeTransform = true			
+			b_container.gestureList = { "n-drag":true, "n-scale":true, "n-rotate":true};			
+			addChild(b_container);	
 				
-			//bottom border
-			var ts1_border:TouchSprite = new TouchSprite()
-			ts1_border.graphics.lineStyle(80,0x555555,1);
-			ts1_border.graphics.drawRect( -25, -25, 1250, 850);				
-			ts1_border.touchChildren = false; 
-			ts1_border.targetParent = true; 				
-			ts1.addChild(ts1_border);
+			//bottom frame
+			var b_frame:TouchSprite = new TouchSprite()
+			b_frame.graphics.lineStyle(80,0x555555,1);
+			b_frame.graphics.drawRect( -25, -25, 1250, 850);				
+			b_frame.mouseChildren = false; 
+			b_frame.targetParent = true; 				
+			b_container.addChild(b_frame);
 				
 			
 			//middle container
-			var ts2:TouchSprite = new TouchSprite()	
-			ts2.graphics.beginFill(0x222222,1);
-			ts2.graphics.drawRect(0, 0, 1200, 800);
-			ts2.scaleX = 0.6;
-			ts2.scaleY = 0.6;
-			ts2.rotation = 20;
-			ts2.touchChildren = true;
-			ts2.nativeTransform = true				
-			ts2.gestureList = { "n-drag":true, "n-scale":true, "n-rotate":true };					
-			ts1.addChild(ts2);	
+			var m_container:TouchSprite = new TouchSprite()	
+			m_container.graphics.beginFill(0x222222,1);
+			m_container.graphics.drawRect(0, 0, 1200, 800);
+			m_container.scaleX = 0.6;
+			m_container.scaleY = 0.6;
+			m_container.rotation = 20;
+			m_container.mouseChildren = true;
+			m_container.nativeTransform = true				
+			m_container.gestureList = { "n-drag":true, "n-scale":true, "n-rotate":true };					
+			b_container.addChild(m_container);	
 		
-			//middle border
-			var ts6_border:TouchSprite = new TouchSprite()
-			ts6_border.graphics.lineStyle(80,0x555555,1);
-			ts6_border.graphics.drawRect( -25, -25, 1250, 850);				
-			ts6_border.touchChildren = false; 
-			ts6_border.targetParent = true; 				
-			ts2.addChild(ts6_border);
+			//middle frame
+			var m_frame:TouchSprite = new TouchSprite()
+			m_frame.graphics.lineStyle(80,0x555555,1);
+			m_frame.graphics.drawRect( -25, -25, 1250, 850);				
+			m_frame.mouseChildren = false; 
+			m_frame.targetParent = true; 				
+			m_container.addChild(m_frame);
 			
 			
 			//top container
-			var ts3:TouchSprite = new TouchSprite()					
-			ts3.graphics.beginFill(0x222222,1);
-			ts3.graphics.drawRect(0, 0, 1200, 800);			
-			ts3.scaleX = 0.4;
-			ts3.scaleY = 0.4;
-			ts3.x = 200;
-			ts3.y = 200;
-			ts3.touchChildren = true;
-			ts3.nativeTransform = true
-			ts3.gestureList = { "n-drag":true, "n-scale":true, "n-rotate":true};					
-			ts2.addChild(ts3);						
+			var t_container:TouchSprite = new TouchSprite()					
+			t_container.graphics.beginFill(0x222222,1);
+			t_container.graphics.drawRect(0, 0, 1200, 800);			
+			t_container.scaleX = 0.4;
+			t_container.scaleY = 0.4;
+			t_container.x = 200;
+			t_container.y = 200;
+			t_container.mouseChildren = true;
+			t_container.nativeTransform = true
+			t_container.gestureList = { "n-drag":true, "n-scale":true, "n-rotate":true};					
+			m_container.addChild(t_container);						
 				
-			//top border
-			var ts2:TouchSprite = new TouchSprite()
-			ts2.graphics.lineStyle(120,0x555555,1);
-			ts2.graphics.drawRect( -25, -25, 1250, 850);				
-			ts2.touchChildren = false; 
-			ts2.targetParent = true; 				
-			ts3.addChild(ts2);
-									
+			//top frame
+			var t_frame:TouchSprite = new TouchSprite()
+			t_frame.graphics.lineStyle(120,0x555555,1);
+			t_frame.graphics.drawRect( -25, -25, 1250, 850);				
+			t_frame.mouseChildren = false; 
+			t_frame.targetParent = true; 				
+			t_container.addChild(t_frame);
+			
+			//logo
+			var logo:TouchSprite = new TouchSprite();
+			var loader:Loader = new Loader();
+			loader.load(new URLRequest("../../../assets/gwLogo.png"));
+			logo.addChild(loader);
+			logo.nativeTransform = true;
+			logo.gestureList = { "n-drag":true, "n-scale":true, "n-rotate":true};								
+			t_container.addChild(logo);									
 		}
 		
 		

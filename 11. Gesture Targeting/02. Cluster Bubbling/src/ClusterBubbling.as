@@ -31,8 +31,8 @@ package
 			
 			//belt
 			var belt:TouchSprite = new TouchSprite()
-				belt.graphics.lineStyle(4, 0x333333, 1);
-				belt.graphics.beginFill(0x999999,1);
+				belt.graphics.lineStyle(4, 0x333333);
+				belt.graphics.beginFill(0x999999);
 				belt.graphics.drawRect(0, 0, 1000, 400);					
 				belt.nativeTransform = true;
 				belt.mouseChildren = true;
@@ -71,7 +71,7 @@ package
 			logo.y = 150;
 			
 			var loader:Loader = new Loader();
-			loader.load(new URLRequest("../../../assets/logos/" + img));
+			loader.load(new URLRequest("../../../assets/" + img));
 			loader.y = -120;
 			loader.x = -120;
 			logo.addChild(loader);

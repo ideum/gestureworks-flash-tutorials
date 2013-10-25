@@ -4,7 +4,11 @@ package
 	import com.gestureworks.core.TouchSprite;
 	import com.gestureworks.events.GWGestureEvent;
 	import com.gestureworks.utils.ExampleTemplate;
+	import com.greensock.TimelineLite;
+	import com.greensock.TweenLite;
+	import flash.display.Loader;
 	import flash.geom.ColorTransform;
+	import flash.net.URLRequest;
 	
 	[SWF(width = "1280", height = "720", backgroundColor = "0x000000", frameRate="60")]
 	
@@ -22,14 +26,16 @@ package
 			// create a touchable sprite 
 			var touchSprite:TouchSprite = new TouchSprite();
 			
-			// draw a simple graphic
-			touchSprite.graphics.beginFill(0xFF0000);
-			touchSprite.graphics.drawRect(0, 0, 300, 300);
-			touchSprite.graphics.endFill();
+			// add a bitmap image to the touch sprite
+			var loader:Loader = new Loader();
+			loader.load(new URLRequest("../../../assets/gwLogo.png"));
+			loader.x = -200;
+			loader.y = -200;
+			touchSprite.addChild(loader);
 			
 			// center graphic in the middle of the stage
-			touchSprite.x = stage.stageWidth / 2 - 150;
-			touchSprite.y = stage.stageHeight / 2 - 150;
+			touchSprite.x = stage.stageWidth / 2;
+			touchSprite.y = stage.stageHeight / 2;
 			
 			// add touch sprite to display list 
 			addChild(touchSprite);
@@ -39,11 +45,11 @@ package
 			touchSprite.addEventListener(GWGestureEvent.HOLD, gestureHandler);
 		}		
 		
-		private function gestureHandler(e:GWGestureEvent):void
+		private function gestureHandler(event:GWGestureEvent):void
 		{
-			var ct:ColorTransform = new ColorTransform();
-			ct.color = Math.random() * 0xFFFFFF;
-			e.target.transform.colorTransform = ct;			
+			var tl:TimelineLite = new TimelineLite();
+			tl.append(new TweenLite(event.target, 0.1, { scale:1.5 } ));
+			tl.append(new TweenLite(event.target, 0.1, { scale:1 } ));		
 		}
 	}
 	
