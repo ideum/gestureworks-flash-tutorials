@@ -3,7 +3,7 @@
 <Gesture_set id="stroke_letter_uppercase">
 	<comment>This is a set of uppercase letters of the English alphabet</comment>
 	
-	<Gesture id="letter-D" type="stroke">
+	<Gesture id="D" type="stroke">
 		<match>
 			<action>
 				<initial>
@@ -35,7 +35,7 @@
 	</Gesture>
 
 
-	<Gesture id="letter-G" type="stroke">
+	<Gesture id="G" type="stroke">
 		<match>
 			<action>
 				<initial>
@@ -67,7 +67,7 @@
 	</Gesture>
 
 
-	<Gesture id="letter-F" type="stroke">
+	<Gesture id="F" type="stroke">
 		<match>
 			<action>
 				<initial>
@@ -99,7 +99,7 @@
 	</Gesture>
 
 
-	<Gesture id="letter-A" type="stroke">
+	<Gesture id="A" type="stroke">
 		<match>
 			<action>
 				<initial>
@@ -131,7 +131,7 @@
 	</Gesture>
 
 
-	<Gesture id="letter-C" type="stroke">
+	<Gesture id="C" type="stroke">
 		<match>
 			<action>
 				<initial>
@@ -163,7 +163,7 @@
 	</Gesture>
 
 
-	<Gesture id="letter-B" type="stroke">
+	<Gesture id="B" type="stroke">
 		<match>
 			<action>
 				<initial>
@@ -195,7 +195,7 @@
 	</Gesture>
 
 
-	<Gesture id="letter-M" type="stroke">
+	<Gesture id="M" type="stroke">
 		<match>
 			<action>
 				<initial>
@@ -227,7 +227,7 @@
 	</Gesture>
 
 
-	<Gesture id="letter-L" type="stroke">
+	<Gesture id="L" type="stroke">
 		<match>
 			<action>
 				<initial>
@@ -259,7 +259,7 @@
 	</Gesture>
 
 
-	<Gesture id="letter-O" type="stroke">
+	<Gesture id="O" type="stroke">
 		<match>
 			<action>
 				<initial>
@@ -291,7 +291,7 @@
 	</Gesture>
 
 
-	<Gesture id="letter-N" type="stroke">
+	<Gesture id="N" type="stroke">
 		<match>
 			<action>
 				<initial>
@@ -323,7 +323,7 @@
 	</Gesture>
 
 
-	<Gesture id="letter-I" type="stroke">
+	<Gesture id="I" type="stroke">
 		<match>
 			<action>
 				<initial>
@@ -355,7 +355,7 @@
 	</Gesture>
 
 
-	<Gesture id="letter-H" type="stroke">
+	<Gesture id="H" type="stroke">
 		<match>
 			<action>
 				<initial>
@@ -387,7 +387,7 @@
 	</Gesture>
 
 
-	<Gesture id="letter-K" type="stroke">
+	<Gesture id="K" type="stroke">
 		<match>
 			<action>
 				<initial>
@@ -419,7 +419,7 @@
 	</Gesture>
 
 
-	<Gesture id="letter-J" type="stroke">
+	<Gesture id="J" type="stroke">
 		<match>
 			<action>
 				<initial>
@@ -451,7 +451,7 @@
 	</Gesture>
 
 
-	<Gesture id="letter-U" type="stroke">
+	<Gesture id="U" type="stroke">
 		<match>
 			<action>
 				<initial>
@@ -483,7 +483,7 @@
 	</Gesture>
 
 
-	<Gesture id="letter-T" type="stroke">
+	<Gesture id="T" type="stroke">
 		<match>
 			<action>
 				<initial>
@@ -515,7 +515,7 @@
 	</Gesture>
 
 
-	<Gesture id="letter-W" type="stroke">
+	<Gesture id="W" type="stroke">
 		<match>
 			<action>
 				<initial>
@@ -547,7 +547,7 @@
 	</Gesture>
 
 
-	<Gesture id="letter-V" type="stroke">
+	<Gesture id="V" type="stroke">
 		<match>
 			<action>
 				<initial>
@@ -579,7 +579,7 @@
 	</Gesture>
 
 
-	<Gesture id="letter-Q" type="stroke">
+	<Gesture id="Q" type="stroke">
 		<match>
 			<action>
 				<initial>
@@ -611,7 +611,7 @@
 	</Gesture>
 
 
-	<Gesture id="letter-P" type="stroke">
+	<Gesture id="P" type="stroke">
 		<match>
 			<action>
 				<initial>
@@ -643,7 +643,7 @@
 	</Gesture>
 
 
-	<Gesture id="letter-S" type="stroke">
+	<Gesture id="S" type="stroke">
 		<match>
 			<action>
 				<initial>
@@ -675,7 +675,7 @@
 	</Gesture>
 
 
-	<Gesture id="letter-R" type="stroke">
+	<Gesture id="R" type="stroke">
 		<match>
 			<action>
 				<initial>
@@ -707,7 +707,7 @@
 	</Gesture>
 
 
-	<Gesture id="letter-Y" type="stroke">
+	<Gesture id="Y" type="stroke">
 		<match>
 			<action>
 				<initial>
@@ -739,7 +739,7 @@
 	</Gesture>
 
 
-	<Gesture id="letter-X" type="stroke">
+	<Gesture id="X" type="stroke">
 		<match>
 			<action>
 				<initial>
@@ -771,7 +771,7 @@
 	</Gesture>
 
 
-	<Gesture id="letter-Z" type="stroke">
+	<Gesture id="Z" type="stroke">
 		<match>
 			<action>
 				<initial>

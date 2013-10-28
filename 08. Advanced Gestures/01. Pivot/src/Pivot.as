@@ -34,7 +34,7 @@ package
 			addChild(touchSprite);
 			
 			// enable events 
-			touchSprite.gestureList = { "pivot": true, "n-drag":true, "n-rotate":true };
+			touchSprite.gestureList = { "pivot": true, "n-drag":true };
 			
 			//transform application
 			touchSprite.nativeTransform = true;

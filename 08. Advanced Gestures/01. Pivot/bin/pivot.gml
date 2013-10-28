@@ -63,31 +63,6 @@
 			</update>
 		</mapping>
 	</Gesture>
-			
-	<Gesture id="n-rotate" type="rotate">
-		<match>
-			<action>
-				<initial>
-					<cluster point_number="0" point_number_min="2" point_number_max="10"/>
-				</initial>
-			</action>
-		</match>
-		<analysis>
-			<algorithm class="kinemetric" type="continuous">
-				<library module="rotate"/>
-				<returns>
-					<property id="rotate_dtheta" result="dtheta"/>
-				</returns>
-			</algorithm>
-		</analysis>	
-		<mapping>
-			<update dispatch_type="continuous">
-				<gesture_event type="rotate">
-					<property ref="rotate_dtheta" target="rotate"/>
-				</gesture_event>
-			</update>
-		</mapping>
-	</Gesture>	
 
 </Gesture_set>					
 </GestureMarkupLanguage>

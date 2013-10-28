@@ -29,14 +29,13 @@ package
 			// center graphic in the middle of the stage
 			touchSprite.x = stage.stageWidth / 2 - 200;
 			touchSprite.y = stage.stageHeight / 2 - 200;
-			
-			// add touch sprite to display list 
 			addChild(touchSprite);
 			
-			// add events 
-			touchSprite.affineTransform = true
+			// enable gestures 
+			touchSprite.gestureList = { "manipulate": true };
+			
+			//enable native transformations
 			touchSprite.nativeTransform = true;
-			touchSprite.gestureList = {"manipulate": true};
 		}
 	}
 

@@ -4,11 +4,15 @@ package
 	import com.gestureworks.core.TouchSprite;
 	import com.gestureworks.events.GWGestureEvent;
 	import com.gestureworks.utils.ExampleTemplate;
+	import com.greensock.TweenLite;
+	import flash.text.TextField;
 	
 	[SWF(width="1280",height="720",backgroundColor="0x000000",frameRate="60")]
 	
 	public class GestureSet extends GestureWorks
 	{
+		private var letter:TextField = new TextField();
+		
 		public function GestureSet():void
 		{
 			gml = "gesture-set.gml";
@@ -27,8 +31,8 @@ package
 			touchSprite.graphics.endFill();
 			
 			// center graphic in the middle of the stage
-			touchSprite.x = 650;
-			touchSprite.y = (stage.stageHeight - 400) / 2;
+			touchSprite.x = stage.stageWidth / 2 - 200;
+			touchSprite.y = stage.stageHeight / 2 - 200;
 			
 			// add touch sprite to display list
 			touchSprite.debugDisplay = true;
@@ -37,12 +41,21 @@ package
 			// add events 
 			touchSprite.affineTransform = true
 			touchSprite.gestureList = {"stroke_letter_uppercase": true};
-			touchSprite.addEventListener(GWGestureEvent.STROKE_LETTER, gestureHandler);
+			touchSprite.addEventListener(GWGestureEvent.STROKE_LETTER, strokeHandler);
+			
+			//stroke letter display
+			letter.textColor = 0xFFFFFF;
+			letter.selectable = false;
+			letter.x = 100;
+			letter.y = 100;
+			touchSprite.addChild(letter);			
 		}
 		
-		private function gestureHandler(e:GWGestureEvent):void
+		private function strokeHandler(event:GWGestureEvent):void
 		{
-			trace(e.value.id);
+			letter.text = event.value.id;
+			letter.scaleY = letter.scaleX = letter.alpha = 1;
+			TweenLite.to(letter, 1, { scaleX:50, scaleY:50, alpha:0 } );
 		}
 	}
 

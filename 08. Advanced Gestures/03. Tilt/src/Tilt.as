@@ -31,23 +31,19 @@ package
 			loader.y = -200;
 			touchSprite.addChild(loader);
 			
-			// align graphic
+			// position touch sprite
 			touchSprite.x = stage.stageWidth / 2;
 			touchSprite.y = stage.stageHeight / 2;
-			
-			// add touch sprite to display list 
 			addChild(touchSprite);
 			
 			// add events 
-			touchSprite.gestureList = {"tilt":true};
-			touchSprite.addEventListener(GWGestureEvent.TILT, onTilt);
+			touchSprite.gestureList = { "tilt":true };
 			
-			function onTilt(event:GWGestureEvent):void
-			{
-				trace("tilt");
-				trace("tilt_dsx:", event.value.tilt_dx);
-				trace("tilt_dsy:", event.value.tilt_dy);	
+			// add tilt handler
+			touchSprite.addEventListener(GWGestureEvent.TILT, onTilt);			
+			function onTilt(event:GWGestureEvent):void{
 				event.target.rotationX += event.value.tilt_dy;
+				event.target.rotationY += event.value.tilt_dx;
 			}
 		
 		}

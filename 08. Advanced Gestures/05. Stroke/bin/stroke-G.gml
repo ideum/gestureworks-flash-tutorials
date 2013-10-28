@@ -2,7 +2,7 @@
 <GestureMarkupLanguage>
 <Gesture_set>	
 
-	<Gesture id="letter-G" type="stroke">
+	<Gesture id="G" type="stroke">
 		<match>
 			<action>
 				<initial>

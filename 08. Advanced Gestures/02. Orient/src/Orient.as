@@ -32,20 +32,15 @@ package
 			// center graphic in the middle of the stage
 			touchSprite.x = stage.stageWidth / 2 - (200 * touchSprite.scale);
 			touchSprite.y = stage.stageHeight / 2 - (200 * touchSprite.scale);
-			
-			// add touch sprite to display list 
-			touchSprite.debugDisplay = true;
 			addChild(touchSprite);
 			
 			// add events 
-			touchSprite.affineTransform = true
-			touchSprite.nativeTransform = true;
-			touchSprite.gestureList = {"orient": true};
-			touchSprite.addEventListener(GWGestureEvent.ORIENT, gestureHandler);
+			touchSprite.gestureList = { "orient": true };	
 			
-			function gestureHandler(e:GWGestureEvent):void
-			{
-				trace(e.value.orient_thumbID);
+			//add orient handler
+			touchSprite.addEventListener(GWGestureEvent.ORIENT, orientHandler);			
+			function orientHandler(e:GWGestureEvent):void{
+				trace(e.value.orient_thumbID, e.value.orient_dx, e.value.orient_dy);
 			}
 		}
 	
