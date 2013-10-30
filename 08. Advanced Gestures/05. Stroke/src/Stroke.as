@@ -38,17 +38,16 @@ package
 			touchSprite.debugDisplay = true;
 			addChild(touchSprite);
 			
-			// add events 
-			touchSprite.affineTransform = true
-			touchSprite.gestureList = {"G": true};
-			touchSprite.addEventListener(GWGestureEvent.STROKE_LETTER, strokeHandler);
-			
 			//stroke letter display
 			letter.textColor = 0xFFFFFF;
 			letter.selectable = false;
 			letter.x = 100;
 			letter.y = 100;
 			touchSprite.addChild(letter);
+			
+			// add events 
+			touchSprite.gestureList = {"G": true};
+			touchSprite.addEventListener(GWGestureEvent.STROKE_LETTER, strokeHandler);
 		}
 		
 		private function strokeHandler(event:GWGestureEvent):void

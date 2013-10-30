@@ -2,11 +2,11 @@
 <GestureMarkupLanguage>
 <Gesture_set>			
 				
-	<Gesture id="my-n-drag" type="drag">
+	<Gesture id="my-2-finger-h-drag" type="drag">
 		<match>
 			<action>
 				<initial>
-					<cluster point_number="0" point_number_min="1" point_number_max="10"/>
+					<cluster point_number="2"/>
 				</initial>
 			</action>
 		</match>
@@ -15,7 +15,6 @@
 				<library module="drag"/>
 				<returns>
 					<property id="drag_dx" result="dx"/>
-					<property id="drag_dy" result="dy"/>
 				</returns>
 			</algorithm>
 		</analysis>												
@@ -23,7 +22,6 @@
 			<update dispatch_type="continuous">
 				<gesture_event type="custom">
 					<property ref="drag_dx" target="x"/>
-					<property ref="drag_dy" target="y"/>
 				</gesture_event>
 			</update>
 		</mapping>

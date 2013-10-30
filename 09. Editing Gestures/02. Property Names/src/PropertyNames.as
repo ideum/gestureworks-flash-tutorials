@@ -31,15 +31,13 @@ package
 			// center graphic in the middle of the stage
 			touchSprite.x = stage.stageWidth / 2 - 200;
 			touchSprite.y = stage.stageHeight / 2 - 200;
-			
-			// add touch sprite to display list 
 			addChild(touchSprite);
 			
 			// add events 
-			touchSprite.nativeTransform = true;
 			touchSprite.gestureList = { "n-drag": true };
-			touchSprite.addEventListener(GWGestureEvent.DRAG, function(e:GWGestureEvent):void {
-				trace(e.value.my_drag_dx, e.value.my_drag_dy);
+			touchSprite.addEventListener(GWGestureEvent.DRAG, function(event:GWGestureEvent):void {
+				event.target.x += event.value.my_drag_dx;
+				event.target.y += event.value.my_drag_dy;
 			});
 		}
 	}

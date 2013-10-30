@@ -3,8 +3,8 @@ package
 	import com.gestureworks.core.GestureWorks;
 	import com.gestureworks.core.TouchSprite;
 	import com.gestureworks.events.GWGestureEvent;
-	import com.gestureworks.utils.ExampleTemplate;
 	import flash.display.Loader;
+	import flash.events.Event;
 	import flash.net.URLRequest;
 	
 	[SWF(width="1280",height="720",backgroundColor="0x000000",frameRate="60")]
@@ -12,8 +12,9 @@ package
 	public class CustomGesture extends GestureWorks
 	{
 		public function CustomGesture():void
-		{
-			gml = "custom-gesture.gml";
+		{		
+			super();			
+			gml = "custom-gesture.gml";				
 		}
 		
 		override protected function gestureworksInit():void
@@ -31,13 +32,17 @@ package
 			// center graphic in the middle of the stage
 			touchSprite.x = stage.stageWidth / 2 - 200;
 			touchSprite.y = stage.stageHeight / 2 - 200;
-			
-			// add touch sprite to display list 
 			addChild(touchSprite);
 			
 			// add events 
-			touchSprite.nativeTransform = true;
-			touchSprite.gestureList = { "my-n-drag": true };
+			touchSprite.gestureList = { "my-2-finger-h-drag": true };
+			
+			//register custom gesture listener
+			touchSprite.addEventListener(GWGestureEvent.CUSTOM.MY-2-FINGER-H-DRAG, customHandler);					
+		}
+		
+		private function customHandler(event:GWGestureEvent):void {
+			event.target.x += e.value.drag_dx;
 		}
 	}
 
