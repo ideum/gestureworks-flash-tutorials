@@ -18,7 +18,6 @@ package
 		{
 			init();
 			gml = "my_gestures.gml";
-			starling = true;
 		}
 		
 		private function init(e:Event = null):void 

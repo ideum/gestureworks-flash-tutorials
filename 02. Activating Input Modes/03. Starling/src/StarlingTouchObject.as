@@ -1,24 +1,25 @@
 package  
 {
+	import com.gestureworks.core.TouchSprite;
 	import com.gestureworks.events.GWTouchEvent;
 	import com.gestureworks.events.GWTransformEvent;
 	import starling.events.TouchEvent;
 	import flash.events.Event;
 	import starling.events.Touch;
 	import starling.events.TouchPhase;
-	import com.gestureworks.core.VirtualTouchObject;
 	
-	public class StarlingTouchObject extends VirtualTouchObject
+	public class StarlingTouchObject extends TouchSprite
 	{		
 		public function StarlingTouchObject(target:*) 
 		{
 			super(target);
+			vto = target;
 			transform.matrix = target.transformationMatrix;	
 		}
 		
-		public function updateTransform():void
+		override public function updateVTO():void
 		{
-			target.transformationMatrix = transform.matrix;
+			vto.transformationMatrix = transform.matrix;
 
 		}
 		

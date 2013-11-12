@@ -61,8 +61,8 @@ package
 			var st:StarlingTouchObject = new StarlingTouchObject(image);
 
 			st.gestureList = { "n-drag":true, "n-rotate":true, "n-scale":true };
-			st.disableNativeTransform = false;	
-			st.gestureReleaseInertia = false;
+			st.nativeTransform = true;	
+			st.releaseInertia = false;
 		}
 		
 		

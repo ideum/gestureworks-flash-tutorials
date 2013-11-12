@@ -12,7 +12,6 @@ package
 		public static function init(starlingStage:starling.display.Stage):void
 		{			
 			starlingStage.addEventListener(starling.events.TouchEvent.TOUCH, onTouch);
-			GestureWorks.application.addEventListener(GWEvent.ENTER_FRAME, onFrame);
 		}
 		
 		private static function onTouch(e:starling.events.TouchEvent):void
@@ -20,14 +19,13 @@ package
 			for each (var touch:Touch in e.touches) {
 				switch (touch.phase) {
 					case TouchPhase.BEGAN :
-						for each (var vto:VirtualTouchObject in TouchManager.touchObjects) {
-							if (touch.isTouching(vto.target)) {
+						for each (var ts:TouchSprite in TouchManager.touchObjects) {
+							if (touch.isTouching(starling.display.DisplayObject(ts.vto))) {
 								var event:GWTouchEvent = new GWTouchEvent(null, GWTouchEvent.TOUCH_BEGIN, true, false, touch.id, false);
 								event.stageX = touch.globalX;
 								event.stageY = touch.globalY;
-								event.eventPhase = 2;
-								event.target = vto;
-								vto.onTouchDown(event);
+								event.target = ts.vto;
+								TouchManager.onTouchDown(event);
 							}							
 						}
 					break;					
@@ -46,13 +44,6 @@ package
 				}
 			}	
 		}	
-				
-		private static function onFrame(e:GWEvent):void 
-		{
-			for each (var to:StarlingTouchObject in TouchManager.touchObjects) {
-				to.updateTransform();						
-			}		
-		}
 		
 	}
 }
