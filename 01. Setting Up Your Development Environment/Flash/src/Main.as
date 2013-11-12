@@ -7,6 +7,7 @@
         public function Main():void
         {
             super();
+			gml = "gestures.gml";
         }
  
         override protected function gestureworksInit():void
