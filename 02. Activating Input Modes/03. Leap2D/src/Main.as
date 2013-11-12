@@ -53,7 +53,7 @@ package
 			
 			myTouchSprite.gestureList = { "n-drag-inertia":true, "n-scale-inertia":true, "n-rotate-inertia":true };				
 			myTouchSprite.releaseInertia = true;
-			myTouchSprite.nativeTransform = false;		
+			myTouchSprite.nativeTransform = true;		
 		}
 
 	}
