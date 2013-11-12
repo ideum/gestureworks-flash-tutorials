@@ -1,15 +1,13 @@
 package  
 {
-	import com.gestureworks.cml.element.*;
+	import com.gestureworks.cml.elements.Container;
+	import com.gestureworks.cml.elements.Graphic;
 	import com.gestureworks.cml.events.*;
 	import com.gestureworks.core.*;
 	import com.gestureworks.events.*;
 	import com.greensock.*;
-	/**
-	 * ...
-	 * @author josh
-	 */
-	public class UselessElement extends Element
+
+	public class UselessElement extends Container
 	{
 		private var channel:Graphic;
 		private var knob:TouchSprite;
@@ -18,8 +16,7 @@ package
 		private var tweening:Boolean = false;
 		private var tween:TweenLite;
 		
-		public function UselessElement() 
-		{
+		public function UselessElement() {
 			super();
 		}
 		
@@ -31,7 +28,6 @@ package
 		}
 		
 		private function onDrag(e:GWGestureEvent):void {
-			//trace("Dragging.");
 			knob.y += e.value.drag_dy;
 			
 			if (knob.y > channel.y + channel.height - 5 - knob.height)
@@ -64,6 +60,8 @@ package
 		
 		private function tweenOff():void {
 			tweening = false;
+			
+			// always dispatch a state even in CML
 			dispatchEvent(new StateEvent(StateEvent.CHANGE, this.id, "uselessEvent", "uselessComplete"));
 		}
 		
@@ -110,7 +108,6 @@ package
 		}
 		
 		private function positionGraphics():void {
-			
 			arm.y -= arm.height;
 			
 			channel.x = width / 4;

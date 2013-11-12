@@ -15,8 +15,8 @@ package
 		public function Main():void 
 		{
 			super();
-			auto = true;
 			CMLParser.addEventListener(CMLParser.COMPLETE, cmlInit);
+			gml = "gestures.gml"; // gml now required
 			cml = "myProject.cml";
 		}
 		

@@ -1,9 +1,8 @@
 package  
 {
 	import com.gestureworks.cml.components.Component;
-	import com.gestureworks.cml.element.*;
+	import com.gestureworks.cml.elements.*;
 	import com.gestureworks.cml.events.*;
-	import com.gestureworks.cml.kits.*;
 	
 	public class UselessViewer extends Component 
 	{		
@@ -14,8 +13,8 @@ package
 		{
 			super();
 			mouseChildren = true;
-			disableNativeTransform = false;
-			disableAffineTransform = false;			
+			nativeTransform = true;
+			affineTransform = false;			
 		}
 		
 		
@@ -26,7 +25,6 @@ package
 		public function set useless(value:*):void 
 		{
 			if (!value) return;
-			
 			_useless = value;
 		}			
 	
@@ -47,15 +45,7 @@ package
 		
 		private function uselessComplete(e:StateEvent):void {
 			trace("The useless machine has done its job.");
-		}
-		
-		/**
-		 * CML initialization
-		 */
-		override public function displayComplete():void
-		{
-			init();
-		}		
+		}	
 					
 		override protected function updateLayout(event:*=null):void 
 		{
