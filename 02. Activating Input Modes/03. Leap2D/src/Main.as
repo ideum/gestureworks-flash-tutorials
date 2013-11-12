@@ -1,15 +1,12 @@
 package 
 {
-	import com.gestureworks.cml.core.CMLParser;
 	import com.gestureworks.core.GestureWorks;
 	import com.gestureworks.core.TouchSprite;
 	import com.gestureworks.managers.Leap2DManager;
-	import com.gestureworks.managers.LeapManager;
 	import com.gestureworks.managers.MotionManager;
 	import com.leapmotion.leap.events.LeapEvent;
 	import com.leapmotion.leap.Pointable;
 	import flash.display.Loader;
-	import flash.events.Event;
 	import flash.net.URLRequest;
 	
 	[SWF(width = "1280", height = "720", backgroundColor = "0x000000", frameRate = "30")]
@@ -20,11 +17,8 @@ package
 		public function Main():void 
 		{
 			super();
-			cml = "library/cml/my_application.cml";
-			gml="library/gml/my_gestures.gml"
-						
-			CMLParser.addEventListener(CMLParser.COMPLETE, cmlInit);
-			
+			gml = "library/gml/my_gestures.gml"
+									
 			//enable Leap input
 			leap2D = true;
 			
@@ -58,16 +52,10 @@ package
 			addChild(myTouchSprite);
 			
 			myTouchSprite.gestureList = { "n-drag-inertia":true, "n-scale-inertia":true, "n-rotate-inertia":true };				
-			myTouchSprite.gestureReleaseInertia = true;
-			myTouchSprite.disableNativeTransform = false;		
+			myTouchSprite.releaseInertia = true;
+			myTouchSprite.nativeTransform = false;		
 		}
-		
-		private function cmlInit(event:Event):void
-		{
-			trace("cmlInit()");
-			CMLParser.removeEventListener(CMLParser.COMPLETE, cmlInit);
-		}
-		
+
 	}
 	
 }
