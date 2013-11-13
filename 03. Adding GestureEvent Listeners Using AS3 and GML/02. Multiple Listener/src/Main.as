@@ -10,7 +10,7 @@ package
 		public function Main():void 
 		{
 			super();
-			gml="library/gml/gestures.gml"			
+			gml = "library/gml/my_gestures.gml";
 		}
 	
 		override protected function gestureworksInit():void

@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cml tuio="false" simulator="false">
 	
-	<TouchContainer id="touchContainer" x="300" y="300" rotation="-45" dimensionsTo="image" mouseChildren="false" disableNativeTransform="false">
+	<TouchContainer id="touchContainer" x="300" y="300" rotation="-45" mouseChildren="false" nativeTransform="true">
 		<Image id="image" src="library/assets/blimp0.png"/>
 		<GestureList>
 			<Gesture ref="n-drag" gestureOn="true"/>
 		</GestureList>
 	</TouchContainer>
-	
-	<DebugKit displayOn="true" displayAlwaysOn="false" displayRadius="300">
-		<DebugLayer type="point_shapes" displayOn="true"/>
-	</DebugKit>
 	
 </cml>

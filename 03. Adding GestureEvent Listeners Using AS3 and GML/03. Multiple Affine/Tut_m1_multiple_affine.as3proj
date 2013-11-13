@@ -17,7 +17,6 @@
   <classpaths>
     <class path="src" />
     <class path="..\..\..\lib" />
-    <class path="..\..\..\gwas\development\gml_core" />
   </classpaths>
   <!-- Build options -->
   <build>
@@ -67,7 +66,8 @@
     <element path="" />
     <element path="..\..\..\lib\GestureWorksCML.swc" />
     <element path="..\..\..\lib\GestureWorksGML.swc" />
-    <element path="..\..\..\gwas\development\gml_core\lib\gml_ext.swc" />
+    <element path="..\..\..\lib\GestureWorksCML_4.0.0.swc" />
+    <element path="..\..\..\lib\GestureWorksGML_4.0.0.swc" />
   </libraryPaths>
   <!-- External Libraries -->
   <externalLibraryPaths>

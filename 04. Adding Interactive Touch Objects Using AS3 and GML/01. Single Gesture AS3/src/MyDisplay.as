@@ -1,24 +1,15 @@
 package  
 {
-	import flash.display.Bitmap;
-	import flash.display.BitmapData;
+	import com.gestureworks.core.TouchSprite;
 	import flash.display.Loader;
 	import flash.display.Sprite;
-	import flash.events.Event;
 	import flash.net.URLRequest;
-	
-
-	import com.gestureworks.core.TouchSprite;
-	import com.gestureworks.core.GestureWorks;
-	import com.gestureworks.events.GWGestureEvent;
 	
 	public class MyDisplay extends Sprite 
 	{
-		
 		public function MyDisplay() 
 		{
-			super();
-			
+			super();			
 			init();
 		}
 		
@@ -36,7 +27,7 @@ package
 				ts0.scaleY = 0.5;
 				addChild(ts0);
 				
-				ts0.disableNativeTransform = false;
+				ts0.nativeTransform = true;
 				ts0.gestureList = {"n-drag":true};
 			
 		}

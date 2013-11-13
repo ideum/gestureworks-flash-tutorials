@@ -8,8 +8,8 @@
     <movie fps="30" />
     <movie width="800" />
     <movie height="600" />
-    <movie version="10" />
-    <movie minorVersion="1" />
+    <movie version="11" />
+    <movie minorVersion="0" />
     <movie platform="Flash Player" />
     <movie background="#FFFFFF" />
   </output>
@@ -66,6 +66,8 @@
     <element path="" />
     <element path="..\..\..\lib\GestureWorksCML.swc" />
     <element path="..\..\..\lib\GestureWorksGML.swc" />
+    <element path="..\..\..\lib\GestureWorksCML_4.0.0.swc" />
+    <element path="..\..\..\lib\GestureWorksGML_4.0.0.swc" />
   </libraryPaths>
   <!-- External Libraries -->
   <externalLibraryPaths>
