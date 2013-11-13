@@ -1,23 +1,16 @@
 package  
 {
-	import flash.display.Bitmap;
-	import flash.display.BitmapData;
+	import com.gestureworks.core.TouchSprite;
+	import com.gestureworks.events.GWGestureEvent;
 	import flash.display.Loader;
 	import flash.display.Sprite;
-	import flash.events.Event;
 	import flash.net.URLRequest;
-	
-	import com.gestureworks.core.TouchSprite;
-	import com.gestureworks.core.GestureWorks;
-	import com.gestureworks.events.GWGestureEvent;
 	
 	public class MyDisplay extends Sprite 
 	{ 
-		
 		public function MyDisplay() 
 		{
 			super();
-			
 			init();
 		}
 		
@@ -30,7 +23,7 @@ package
 			
 			myTouchSprite.x = 50;
 			myTouchSprite.y = 50;
-			myTouchSprite.rotation = 45;
+			myTouchSprite.rotation = 0;
 			myTouchSprite.scaleX = 0.5;
 			myTouchSprite.scaleY = 0.5;
 			addChild(myTouchSprite);

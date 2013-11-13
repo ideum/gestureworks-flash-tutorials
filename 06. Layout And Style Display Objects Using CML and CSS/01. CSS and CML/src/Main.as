@@ -1,7 +1,5 @@
 package 
 {
-	import com.gestureworks.cml.core.CMLObjectList;
-	import com.gestureworks.cml.element.Container;
 	import com.gestureworks.cml.core.CMLParser;
 	import com.gestureworks.core.GestureWorks;
 	import flash.events.Event;
@@ -14,13 +12,7 @@ package
 		{
 			super();
 			cml = "library/cml/my_application.cml";
-			
 			CMLParser.addEventListener(CMLParser.COMPLETE, cmlInit);
-		}
-	
-		override protected function gestureworksInit():void
- 		{
-			trace("gestureWorksInit()");			
 		}
 		
 		private function cmlInit(event:Event):void
