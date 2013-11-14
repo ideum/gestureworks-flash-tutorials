@@ -28,8 +28,8 @@
 		<mapping>
 			<update dispatch_type="continuous">
 				<gesture_event type="drag">
-					<property ref="drag_dx" target="x"/>
-					<property ref="drag_dy" target="y"/>
+					<property ref="drag_dx" target="x" min="0" max="1200" />
+					<property ref="drag_dy" target="y" min="0" max="680" />
 				</gesture_event>
 			</update>
 		</mapping>
@@ -61,8 +61,8 @@
 		<mapping>
 			<update dispatch_type="continuous">
 				<gesture_event type="scale">
-					<property ref="scale_dsx" target="scaleX"/>
-					<property ref="scale_dsy" target="scaleY"/>
+					<property ref="scale_dsx" target="scaleX" min="1" max="1.5"/>
+					<property ref="scale_dsy" target="scaleY" min="1" max="1.5"/>
 				</gesture_event>
 			</update>
 		</mapping>

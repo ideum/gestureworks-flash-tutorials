@@ -16,9 +16,6 @@
   <!-- Other classes to be compiled into your SWF -->
   <classpaths>
     <class path="src" />
-    <class path="..\..\..\lib" />
-    <class path="..\..\..\..\cml_core" />
-    <class path="..\..\..\..\gml_core" />
     <class path="..\..\..\..\lib" />
   </classpaths>
   <!-- Build options -->
@@ -69,6 +66,7 @@
     <element path="" />
     <element path="..\..\..\..\lib\cml_ext.swc" />
     <element path="..\..\..\..\lib\gml_ext.swc" />
+    <element path="..\..\..\..\lib\GestureWorksGML_4.0.0.swc" />
   </libraryPaths>
   <!-- External Libraries -->
   <externalLibraryPaths>
