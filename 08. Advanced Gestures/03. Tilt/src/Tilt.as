@@ -23,6 +23,8 @@ package
 			
 			// create a touchable sprite 
 			var touchSprite:TouchSprite = new TouchSprite();
+			touchSprite.debugDisplay = true;
+			touchSprite.gestureReleaseInertia = true;
 			
 			// add a bitmap image to the touch sprite
 			var loader:Loader = new Loader();

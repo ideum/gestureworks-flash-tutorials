@@ -24,6 +24,10 @@
 				</algorithm>
 			</analysis>
 			<processing>
+				<inertial_filter>
+					<property ref="tilt_dx" active="true" friction="0.9"/>
+					<property ref="tilt_dy" active="true" friction="0.9"/>
+				</inertial_filter>				
 				<multiply_filter>
 						<property ref="tilt_dx" active="true" factor="1000"/>
 						<property ref="tilt_dy" active="true" factor="1000"/>
