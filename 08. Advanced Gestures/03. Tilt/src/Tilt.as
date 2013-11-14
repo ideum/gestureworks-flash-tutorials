@@ -24,7 +24,6 @@ package
 			// create a touchable sprite 
 			var touchSprite:TouchSprite = new TouchSprite();
 			touchSprite.debugDisplay = true;
-			touchSprite.gestureReleaseInertia = true;
 			
 			// add a bitmap image to the touch sprite
 			var loader:Loader = new Loader();
@@ -40,6 +39,7 @@ package
 			
 			// add events 
 			touchSprite.gestureList = { "tilt":true };
+			touchSprite.nativeTransform = true;
 			
 			// add tilt handler
 			touchSprite.addEventListener(GWGestureEvent.TILT, onTilt);			
