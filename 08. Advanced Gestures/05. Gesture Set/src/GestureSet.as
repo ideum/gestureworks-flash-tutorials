@@ -24,6 +24,7 @@ package
 
 			// create a touchable sprite 
 			var touchSprite:TouchSprite = new TouchSprite();
+			touchSprite.debugDisplay = true;			
 			
 			// draw a simple graphic
 			touchSprite.graphics.beginFill(0xFF0000);
@@ -35,7 +36,6 @@ package
 			touchSprite.y = stage.stageHeight / 2 - 200;
 			
 			// add touch sprite to display list
-			touchSprite.debugDisplay = true;
 			addChild(touchSprite);
 			
 			// add events 

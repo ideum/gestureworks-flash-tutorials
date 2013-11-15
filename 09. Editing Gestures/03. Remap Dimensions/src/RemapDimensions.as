@@ -36,8 +36,8 @@ package
 			addChild(touchSprite);
 			
 			// add events 
-			touchSprite.nativeTransform = true;
-			touchSprite.gestureList = {"n-rotate-to-scale": true};
+			touchSprite.gestureList = { "n-rotate-to-scale": true };
+			touchSprite.nativeTransform = true;			
 		}
 	}
 

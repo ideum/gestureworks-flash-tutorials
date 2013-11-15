@@ -31,16 +31,14 @@ package
 			// center graphic in the middle of the stage
 			touchSprite.x = stage.stageWidth / 2 - 200;
 			touchSprite.y = stage.stageHeight / 2 - 200;
-			
-			// add touch sprite to display list 
 			addChild(touchSprite);
 			
 			//enable release inertia
 			touchSprite.releaseInertia = true;
 			
 			// add events 
+			touchSprite.gestureList = { "n-drag-boundary":true, "n-scale-boundary":true };
 			touchSprite.nativeTransform = true;
-			touchSprite.gestureList = {"n-drag":true, "n-scale":true};
 		}
 	
 	}

@@ -29,8 +29,8 @@
 		<mapping>
 			<update dispatch_type="continuous">
 				<gesture_event type="drag">
-					<property ref="drag_dx" target="x"/>
-					<property ref="drag_dy" target="y"/>
+					<property ref="drag_dx" target="x" min="0" max="1120" />
+					<property ref="drag_dy" target="y" min="0" max="620" />
 				</gesture_event>
 			</update>
 		</mapping>

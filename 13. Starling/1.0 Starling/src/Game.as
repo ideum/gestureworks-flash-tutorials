@@ -36,7 +36,7 @@ package
 		private function loadBitmap():void 
 		{
 			loader.contentLoaderInfo.addEventListener(Event.COMPLETE, onComplete);
-			loader.load(new URLRequest("gw_logo.png")); 
+			loader.load(new URLRequest("../../../assets/gwLogo4.png")); 
 		}
 		
 		private function onComplete(e:*):void 

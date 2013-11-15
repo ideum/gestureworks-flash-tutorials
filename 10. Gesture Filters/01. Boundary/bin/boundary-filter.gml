@@ -2,7 +2,7 @@
 <GestureMarkupLanguage>
 <Gesture_set>
 				
-	<Gesture id="n-drag" type="drag">
+	<Gesture id="n-drag-boundary" type="drag">
 		<match>
 			<action>
 				<initial>
@@ -21,8 +21,8 @@
 		</analysis>	
 		<processing>
 			<boundary_filter>
-				<property ref="drag_dx" active="true" boundary_min="100" boundary_max="1100"/>
-				<property ref="drag_dy" active="true" boundary_min="100" boundary_max="550"/>
+				<property ref="drag_dx" active="true" boundary_min="100" boundary_max="1180"/>
+				<property ref="drag_dy" active="true" boundary_min="100" boundary_max="620"/>
 			</boundary_filter>
 		</processing>												
 		<mapping>
@@ -35,7 +35,7 @@
 		</mapping>
 	</Gesture>
 	
-	<Gesture id="n-scale" type="scale">		
+	<Gesture id="n-scale-boundary" type="scale">		
 		<match>
 			<action>
 				<initial>

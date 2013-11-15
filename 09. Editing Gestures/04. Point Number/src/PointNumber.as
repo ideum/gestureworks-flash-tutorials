@@ -34,11 +34,11 @@ package
 			touchSprite1.y = 50
 			addChild(touchSprite1);			
 			
-			//enable native transform
-			touchSprite1.nativeTransform = true;
-			
 			//assign drag with point range
 			touchSprite1.gestureList = { "1-to-2-finger-drag": true };
+			
+			//enable native transform
+			touchSprite1.nativeTransform = true;			
 			
 			
 			//create second touchable sprite
@@ -53,13 +53,13 @@ package
 			//position touch sprite
 			touchSprite2.x = 100;
 			touchSprite2.y = 375;			
-			addChild(touchSprite2);
-	
-			//enable native transform
-			touchSprite2.nativeTransform = true;	
+			addChild(touchSprite2);	
 			
 			//assign drag with strict point number
 			touchSprite2.gestureList = { "3-finger-drag": true };			
+			
+			//enable native transform
+			touchSprite2.nativeTransform = true;			
 		}
 	
 	}
