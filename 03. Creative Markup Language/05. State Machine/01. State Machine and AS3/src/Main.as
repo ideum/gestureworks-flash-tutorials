@@ -5,7 +5,7 @@ package
 	import com.gestureworks.core.GestureWorks;
 	import com.gestureworks.events.GWGestureEvent;
 
-	[SWF(width = "1280", height = "720", backgroundColor = "0x000000", frameRate = "30")]
+	[SWF(width = "1280", height = "720", backgroundColor = "0x000000", frameRate = "60")]
 
 	public class Main extends GestureWorks
 	{
@@ -29,9 +29,11 @@ package
 
 			g.state["left"] = new State;
 			g.state["left"].x = 100;
+			g.state["left"].scale = 1;
 			
 			g.state["right"] = new State;
-			g.state["right"].x = 500;
+			g.state["right"].x = 750;
+			g.state["right"].scale = .5;
 			
 			g.loadState("left");
 			
