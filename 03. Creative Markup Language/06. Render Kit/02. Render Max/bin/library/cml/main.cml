@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<cml tuio="false" simulator="false">
+
+<Container x="650" y="352">
+	
+	<RenderKit>
+		<Renderer repeat="6">
+			<Image src="{imagepath}" height="200" />
+		</Renderer>
+
+		<RendererData>
+			<photo>
+				<imagepath>library/assets/lake-vuoksa.jpg</imagepath>
+			</photo>
+		</RendererData>
+
+	</RenderKit>
+	
+	<Layout ref="Fan" angle="60" type="topLeftOrigin" tween="true" tweenTime="1500" />
+
+	<Gesture ref="n-drag" />
+	<Gesture ref="n-scale" />
+	<Gesture ref="n-rotate" />
+</Container>	
+
+</cml>
