@@ -21,45 +21,45 @@ package
 		override protected function gestureworksInit():void
 		{
 			var container:TouchSprite = new TouchSprite()	
-				container.x = 100
-				container.y = 100;					
-				container.clusterBubbling = false;
-				container.mouseChildren = true;
-				container.nativeTransform = true;
-				container.gestureList = { "n-drag":true};					
+			container.x = 100
+			container.y = 100;					
+			container.clusterBubbling = false;
+			container.mouseChildren = true;
+			container.nativeTransform = true;
+			container.gestureList = { "n-drag":true};					
 			addChild(container);
 			
 			//belt
 			var belt:TouchSprite = new TouchSprite()
-				belt.graphics.lineStyle(4, 0x333333);
-				belt.graphics.beginFill(0x999999);
-				belt.graphics.drawRect(0, 0, 1000, 400);					
-				belt.nativeTransform = true;
-				belt.mouseChildren = true;
-				belt.clusterBubbling = true; 
-				belt.y_lock = true; 
-				belt.gestureList = { "n-drag":true };
+			belt.graphics.lineStyle(4, 0x333333);
+			belt.graphics.beginFill(0x999999);
+			belt.graphics.drawRect(0, 0, 1000, 400);					
+			belt.nativeTransform = true;
+			belt.mouseChildren = true;
+			belt.clusterBubbling = true; 
+			belt.y_lock = true; 
+			belt.gestureList = { "n-drag":true };
 			container.addChild(belt);
 			
 			//logos
 			var logo1:TouchSprite = getLogo("gwLogo.png");
-				logo1.x = 150;				
+			logo1.x = 150;				
 			belt.addChild(logo1);	
 		
 			var logo2:TouchSprite = getLogo("gwLogo1.png");	
-				logo2.x = 450;					
+			logo2.x = 450;					
 			belt.addChild(logo2);
 			
 			var logo3:TouchSprite = getLogo("gwLogo2.png");	
-				logo3.x = 750;
+			logo3.x = 750;
 			belt.addChild(logo3);			
 			
 			// touch frame
 			var frame_width:int = 80;
 			var frame:TouchSprite = new TouchSprite();
-				frame.graphics.lineStyle(frame_width, 0x6666CC, 0.6);
-				frame.graphics.drawRect( -frame_width/2, -frame_width/2, 400+frame_width, 400+frame_width);
-				frame.targetParent = true; 
+			frame.graphics.lineStyle(frame_width, 0x6666CC, 0.6);
+			frame.graphics.drawRect( -frame_width/2, -frame_width/2, 400+frame_width, 400+frame_width);
+			frame.targetParent = true; 
 			container.addChild(frame)																	
 		}
 		
