@@ -16,9 +16,7 @@ package
 			nativeTransform = true;
 			affineTransform = false;			
 		}
-		
-		
-		
+				
 		private var _useless:*;
 		
 		public function get useless():* {return _useless}

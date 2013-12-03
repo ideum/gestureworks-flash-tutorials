@@ -4,7 +4,7 @@
   <output>
     <movie outputType="Application" />
     <movie input="" />
-    <movie path="bin\Tut_m3_single_gesture.swf" />
+    <movie path="bin\Direct_Gestures.swf" />
     <movie fps="30" />
     <movie width="800" />
     <movie height="600" />
@@ -68,8 +68,8 @@
     <element path="..\..\..\lib\GestureWorksGML.swc" />
     <element path="..\..\..\lib\GestureWorksCML_4.0.0.swc" />
     <element path="..\..\..\lib\GestureWorksGML_4.0.0.swc" />
-    <element path="..\..\..\..\lib\GestureWorksGML_4.0.0.swc" />
     <element path="..\..\..\..\lib\GestureWorksCML_4.0.0.swc" />
+    <element path="..\..\..\..\lib\GestureWorksGML_4.0.0.swc" />
   </libraryPaths>
   <!-- External Libraries -->
   <externalLibraryPaths>
