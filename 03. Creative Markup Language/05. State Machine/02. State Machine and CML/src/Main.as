@@ -1,11 +1,14 @@
 package 
 {
+	import com.gestureworks.cml.core.CMLParser;
 	import com.gestureworks.cml.elements.Graphic;
 	import com.gestureworks.cml.elements.State;
+	import com.gestureworks.cml.utils.document;
 	import com.gestureworks.core.GestureWorks;
 	import com.gestureworks.events.GWGestureEvent;
+	import flash.events.Event;
 
-	[SWF(width = "1280", height = "720", backgroundColor = "0x000000", frameRate = "60")]
+	[SWF(width = "1280", height = "720", backgroundColor = "0x000000", frameRate = "30")]
 
 	public class Main extends GestureWorks
 	{
@@ -13,37 +16,22 @@ package
 		{
 			super();
 			gml = "library/gml/gestures.gml";
+			cml = "library/cml/main.cml";
+			CMLParser.addEventListener(CMLParser.COMPLETE, cmlInit);
 		}
 		
-		override protected function gestureworksInit():void
+		private function cmlInit(event:Event):void
 		{
-			trace("gestureworksInit()");
+			trace("cmlInit()");
 			
-			// create graphic
-			var g:Graphic = new Graphic;
-			g.shape = "circle";
-			g.radius = 250;
-			g.y = 100;
-			addChild(g);
-
-			g.state["left"] = new State;
-			g.state["left"].x = 100;
-			g.state["left"].scale = 1;
-			
-			g.state["right"] = new State;
-			g.state["right"].x = 750;
-			g.state["right"].scale = .5;
+			// get graphic object from cml document
+			var g:Graphic = document.getElementById("circle-graphic");			
 			
 			g.loadState("left");
-			
-			g.gestureList = { "n-tap":true };
 			g.addEventListener(GWGestureEvent.TAP, onTap);
-						
-			
+
 			function onTap(e:GWGestureEvent):void {	
-				
-				trace("tap", g.stateId );
-				
+								
 				var fingerCount:int = e.value.n;
 				
 				if (fingerCount == 1) {
