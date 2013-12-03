@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cml tuio="false" simulator="false">
+	
+<Graphic id="circle-graphic" shape="circle" radius="250" x="100" y="100" scale="1.0" stateId="left">
+	<State x="750" scale=".5" stateId="right" />
+	<Gesture ref="n-tap" />
+</Graphic>
+	
+</cml>
