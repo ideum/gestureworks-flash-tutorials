@@ -4,14 +4,15 @@ package
 	import com.gestureworks.core.GestureWorks;
 	import flash.events.Event;
 
-	[SWF(width = "1280", height = "720", backgroundColor = "0x000000", frameRate = "30")]
+	[SWF(width = "800", height = "720", backgroundColor = "0x000000", frameRate = "30")]
 
 	public class Main extends GestureWorks
 	{
 		public function Main():void 
 		{
 			super();
-			cml = "library/cml/my_application.cml";
+			cml = "library/cml/main.cml";
+			gml = "library/gml/gestures.gml";
 			CMLParser.addEventListener(CMLParser.COMPLETE, cmlInit);
 		}
 		

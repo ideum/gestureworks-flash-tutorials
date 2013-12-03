@@ -22,11 +22,6 @@
 				<Graphic id="btn-vis" shape="circle" radius="20" color="0xffff00"/>
 				<Graphic id="btn-hit" shape="circle" radius="20" color="0xffff00" alpha="0" />
 			</Button>
-			
-			<Button dispatch="down:close" hit="close-hit" initial="close-vis" mouseDown="close-vis" mouseUp="close-vis" mouseOut="close-vis">
-				<Graphic id="close-vis" shape="circle" radius="20" color="0xff00ff"/>
-				<Graphic id="close-hit" shape="circle" radius="20" color="0xffff00" alpha="0" />
-			</Button>
 		</Menu>
 		
 		<Gesture ref="n-drag" />

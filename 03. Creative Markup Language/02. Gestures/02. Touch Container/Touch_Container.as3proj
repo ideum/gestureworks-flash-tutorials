@@ -4,7 +4,7 @@
   <output>
     <movie outputType="Application" />
     <movie input="" />
-    <movie path="bin\Tut_m3_multiple_gesture.swf" />
+    <movie path="bin\Touch_Container.swf" />
     <movie fps="30" />
     <movie width="800" />
     <movie height="600" />
@@ -36,7 +36,7 @@
     <option showDeprecationWarnings="True" />
     <option showUnusedTypeSelectorWarnings="True" />
     <option strict="True" />
-    <option useNetwork="False" />
+    <option useNetwork="True" />
     <option useResourceBundleMetadata="True" />
     <option warnings="True" />
     <option verboseStackTraces="False" />

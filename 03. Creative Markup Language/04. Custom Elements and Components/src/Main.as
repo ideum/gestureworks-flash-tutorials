@@ -11,7 +11,6 @@ package
 	
 	public class Main extends GestureWorks 
 	{
-		
 		public function Main():void 
 		{
 			super();

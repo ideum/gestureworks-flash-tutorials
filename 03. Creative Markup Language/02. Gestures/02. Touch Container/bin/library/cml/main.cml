@@ -3,16 +3,20 @@
 	
 <Stage color="0x000000">
 		
-	<Container x="50" y="50">
+	<TouchContainer x="50" y="50">
 	
 		<Graphic id="title-bg" x="10" y="10" shape="rectangle" width="420" height="80" alpha="1" color="0x223444">
 			<Text id="title" x="20" y="18" fontSize="30" color="0xFFFFFF" width="500" height="50" str="Wright Brothers Collection" />	
 		</Graphic>
 		
-		<Image id="wb-1" src="library/assets/wb0.jpg" x="10" y="108" scale=".6" />
-		<Image id="wb-2" src="library/assets/wb1.jpg" x="575" y="108" scale=".6" />
-
-	</Container>
+		<Image id="wb-1" src="library/assets/wb0.jpg" x="10" y="108" scale=".6"/>
+		<Image id="wb-2" src="library/assets/wb1.jpg" x="575" y="108" scale=".6"/>
+		
+		<Gesture ref="n-drag" />
+		<Gesture ref="n-scale" />
+		<Gesture ref="n-rotate" />
+		
+	</TouchContainer>
 	
 </Stage>
 	

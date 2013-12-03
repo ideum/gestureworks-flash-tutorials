@@ -11,14 +11,9 @@ package
 		public function Main():void 
 		{
 			super();
-			cml = "library/cml/my_application.cml";
-			gml = "library/gml/my_gestures.gml";
+			cml = "library/cml/main.cml";
+			gml = "library/gml/gestures.gml";
 			CMLParser.addEventListener(CMLParser.COMPLETE, cmlInit);
-		}
-	
-		override protected function gestureworksInit():void
- 		{
-			trace("gestureWorksInit()");				
 		}
 		
 		private function cmlInit(event:Event):void
