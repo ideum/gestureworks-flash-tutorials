@@ -6,7 +6,6 @@
 	
 	<RenderKit>
 		<Renderer>
-			
 			<Container>
 				<Graphic shape="square" width="400" height="200" x="{x}" y="{y}" color="{color}">
 					<State stateId="s0" color="0xFF0000" x="400" y="250" rotation="0" scale="1" visible="true" />
@@ -17,12 +16,9 @@
 					<Gesture ref="n-scale" />
 				</Graphic>
 			</Container>	
-			
 		</Renderer>
 
-
 		<RendererData>
-			
 			<item stateId="s0">
 				<x>400</x>
 				<y>250</y>
@@ -40,7 +36,6 @@
 				<y>350</y>
 				<color>0x0000FF</color>
 			</item>
-			
 		</RendererData>
 
 	</RenderKit>
