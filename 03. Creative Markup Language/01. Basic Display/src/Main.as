@@ -1,6 +1,7 @@
 package 
 {
 	import com.gestureworks.cml.core.CMLParser;
+	import com.gestureworks.cml.utils.document;
 	import com.gestureworks.core.GestureWorks;
 	import flash.events.Event;
 
@@ -11,15 +12,16 @@ package
 		public function Main():void 
 		{
 			super();
-			cml = "library/cml/main.cml";
 			gml = "library/gml/gestures.gml";
-			CMLParser.addEventListener(CMLParser.COMPLETE, cmlInit);
+			cml = "library/cml/main.cml";
+			CMLParser.addEventListener(CMLParser.COMPLETE, cmlComplete);
 		}
 		
-		private function cmlInit(event:Event):void
+		private function cmlComplete(event:Event):void
 		{
-			trace("cmlInit()");
-			CMLParser.removeEventListener(CMLParser.COMPLETE, cmlInit);
+			trace("cmlComplete()");
+			CMLParser.removeEventListener(CMLParser.COMPLETE, cmlComplete);
+			trace( document.getElementById("title").str );
 		}
 	
 	}
