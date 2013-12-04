@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<cml tuio="false" simulator="false">
+
+<Container x="5" y="200">
+	
+	<RenderKit>
+		<Renderer>
+			<Text str="{title}" color="0xFFFFFF" width="80" />
+			<Image src="{imagepath}" height="200">
+				<Gesture ref="n-drag" />
+				<Gesture ref="n-scale" />
+				<Gesture ref="n-rotate" />
+			</Image>
+		</Renderer>
+
+
+		<RendererData>
+			
+			<photo>
+				<title>Lake Vouska</title>
+				<imagepath>library/assets/lake-vuoksa.jpg</imagepath>
+			</photo>
+			
+			<photo>
+				<title>Michael Otto</title>
+				<imagepath>library/assets/michael-otto.jpg</imagepath>
+			</photo>
+			
+			<photo>
+				<title>Neretva River</title>
+				<imagepath>library/assets/neretva-river.jpg</imagepath>
+			</photo>
+			
+		</RendererData>
+
+	</RenderKit>
+	
+	<Layout ref="List" useMargins="true" type="horizontal" marginX="10" />
+
+</Container>	
+
+</cml>
