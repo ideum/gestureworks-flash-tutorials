@@ -2,7 +2,7 @@
 
 <cml tuio="false" simulator="false">
 
-<Container x="650" y="352">
+<TouchContainer x="650" y="352">
 	
 	<RenderKit>
 		<Renderer repeat="6">
@@ -22,6 +22,7 @@
 	<Gesture ref="n-drag" />
 	<Gesture ref="n-scale" />
 	<Gesture ref="n-rotate" />
-</Container>	
+	
+</TouchContainer>	
 
 </cml>
