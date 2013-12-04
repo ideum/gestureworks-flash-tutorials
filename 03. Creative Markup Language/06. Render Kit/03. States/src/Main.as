@@ -1,6 +1,9 @@
 package 
 {
 	import com.gestureworks.cml.core.CMLParser;
+	import com.gestureworks.cml.events.StateEvent;
+	import com.gestureworks.cml.managers.StateManager;
+	import com.gestureworks.cml.utils.document;
 	import com.gestureworks.core.GestureWorks;
 	import flash.events.Event;
 
@@ -19,6 +22,14 @@ package
 		private function cmlInit(event:Event):void
 		{
 			trace("cmlInit()");
+			
+			document.getElementById("btns").
+				addEventListener(StateEvent.CHANGE, onChange);
+
+			function onChange(e:StateEvent):void {
+				StateManager.loadState(e.value);
+				
+			}
 		}
 	}
 }
