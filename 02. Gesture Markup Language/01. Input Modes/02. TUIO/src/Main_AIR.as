@@ -26,6 +26,8 @@ package
 									
 			//enable TUIO input
 			tuio = true; 
+			//tuio = "protocol:tcp,port:3333";
+			//tuio = "protocol:flosc";
 		}
 	
 		override protected function gestureworksInit():void
