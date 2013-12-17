@@ -52,12 +52,14 @@ package
 			myTouchSprite.debugDisplay = true;
 			addChild(myTouchSprite);
 			
-			myTouchSprite.gestureEvents = true;
-			myTouchSprite.transform3d = false;
-			myTouchSprite.motionClusterMode = "global";
 			myTouchSprite.gestureList = { "3dmotion-1-pinch-2dtranslate":true,"3dmotion-2-pinch-2dscale":true };	
 			myTouchSprite.releaseInertia = true;
 			myTouchSprite.nativeTransform = true;		
+			
+			myTouchSprite.gestureEvents = true;
+			myTouchSprite.transform3d = false;
+			myTouchSprite.motionClusterMode = "global";
+			myTouchSprite.motionEnabled = true;			
 		}
 
 	}
