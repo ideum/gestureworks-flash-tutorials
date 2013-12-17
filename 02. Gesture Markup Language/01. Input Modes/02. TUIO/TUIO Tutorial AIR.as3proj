@@ -16,7 +16,7 @@
   <!-- Other classes to be compiled into your SWF -->
   <classpaths>
     <class path="src" />
-    <class path="..\..\..\..\gestureworks-flash-gml" />
+    <class path="..\..\..\..\lib" />
   </classpaths>
   <!-- Build options -->
   <build>
@@ -53,7 +53,7 @@
   </includeLibraries>
   <!-- SWC Libraries -->
   <libraryPaths>
-    <element path="..\..\..\..\gestureworks-flash-gml\lib\gml_ext.swc" />
+    <element path="..\..\..\..\lib\GestureWorksGML_4.0.0.swc" />
   </libraryPaths>
   <!-- External Libraries -->
   <externalLibraryPaths>

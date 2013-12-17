@@ -18,7 +18,7 @@ package
 		public function Main():void 
 		{
 			super();
-			gml = "library/gml/my_gestures.gml"
+			gml = "my_gestures.gml"
 									
 			//enable Leap input
 			leap3D = true;
@@ -46,9 +46,9 @@ package
 			trace("gestureWorksInit()");	
 			
 			var myTouchSprite:TouchSprite = new TouchSprite();
-			var Loader0:Loader = new Loader();
-				Loader0.load(new URLRequest("library/assets/Vitruvian_man.png"));
-			myTouchSprite.addChild(Loader0);
+			var loader:Loader = new Loader();
+			loader.load(new URLRequest("../../../../assets/ornithopiter_wing.png"));
+			myTouchSprite.addChild(loader);
 			myTouchSprite.debugDisplay = true;
 			addChild(myTouchSprite);
 			
@@ -56,7 +56,6 @@ package
 			myTouchSprite.releaseInertia = true;
 			myTouchSprite.nativeTransform = true;		
 			
-			myTouchSprite.gestureEvents = true;
 			myTouchSprite.transform3d = false;
 			myTouchSprite.motionClusterMode = "global";
 			myTouchSprite.motionEnabled = true;			

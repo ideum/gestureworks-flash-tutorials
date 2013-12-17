@@ -18,7 +18,9 @@ package
 		public function Main():void 
 		{
 			super();
-			gml = "my_gestures.gml"									
+			fullscreen = true;
+			
+			gml = "my_gestures.gml"		
 			simulator = true;
 			tuio = true;
 		}
@@ -32,11 +34,14 @@ package
 			touch.x = 26;
 			touch.y = 160;
 			touch.debugDisplay = true;
-			touch.graphics.beginFill(0xFFFFFF);
-			touch.graphics.drawRect(0, 0, 400, 400);
+			var loader:Loader = new Loader();
+			loader.load(new URLRequest("../../../../assets/lake-vuoksa.jpg"));
+			touch.addChild(loader)
+			addChild(touch);
+			
 			touch.gestureList = { "n-drag-inertia":true, "n-rotate-inertia":true, "n-scale-inertia":true };
 			touch.nativeTransform = true;
-			addChild(touch);
+			touch.releaseInertia = true;
 
 			touch.localModes = true;
 			touch.nativeTouch = true;
@@ -47,26 +52,32 @@ package
 			mouse.x = 438;
 			mouse.y = 160;			
 			mouse.debugDisplay = true;
-			mouse.graphics.beginFill(0x0000FF);
-			mouse.graphics.drawRoundRect(0, 0, 400, 400, 20, 20);
+			loader = new Loader();
+			loader.load(new URLRequest("../../../../assets/michael-otto.jpg"));
+			mouse.addChild(loader)
+			addChild(mouse);
+
 			mouse.gestureList = { "n-drag-inertia":true, "n-rotate-inertia":true, "n-scale-inertia":true };
 			mouse.nativeTransform = true;
-			addChild(mouse);
-			
+			mouse.releaseInertia = true;
+
 			mouse.localModes = true;
 			mouse.simulator = true;			
-			
+
 
 			//tuio input only			
 			var tuio:TouchSprite = new TouchSprite();
 			tuio.x = 852;
 			tuio.y = 160;			
 			tuio.debugDisplay = true;
-			tuio.graphics.beginFill(0x00FF00);
-			tuio.graphics.drawCircle(200,200,200);
+			loader = new Loader();
+			loader.load(new URLRequest("../../../../assets/neretva-river.jpg"));
+			tuio.addChild(loader)
+			addChild(tuio);		
+
 			tuio.gestureList = { "n-drag-inertia":true, "n-rotate-inertia":true, "n-scale-inertia":true };
 			tuio.nativeTransform = true;
-			addChild(tuio);			
+			tuio.releaseInertia = true;			
 
 			tuio.localModes = true;
 			tuio.tuio = true;									

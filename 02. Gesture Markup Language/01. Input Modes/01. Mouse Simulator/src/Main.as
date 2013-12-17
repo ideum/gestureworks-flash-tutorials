@@ -27,14 +27,16 @@ package
  		{
 			trace("gestureWorksInit()");	
 			
-			var ts:TouchSprite = new TouchSprite();
-			ts.graphics.beginFill(0xFF0000);
-			ts.graphics.drawRect(0, 0, 400, 400);
-			ts.gestureList = { "n-drag-inertia":true, "n-scale-inertia":true, "n-rotate-inertia":true };
-			ts.nativeTransform = true;
-			ts.releaseInertia = true;
-			ts.debugDisplay = true;
-			addChild(ts);
+			var myTouchSprite:TouchSprite = new TouchSprite();	
+			var loader:Loader = new Loader();
+			loader.load(new URLRequest("../../../../assets/bee.jpg"));
+			myTouchSprite.addChild(loader);
+			myTouchSprite.debugDisplay = true;
+			addChild(myTouchSprite);			
+			
+			myTouchSprite.gestureList = { "n-drag-inertia":true, "n-scale-inertia":true, "n-rotate-inertia":true };
+			myTouchSprite.nativeTransform = true;
+			myTouchSprite.releaseInertia = true;
 		}
 
 	}

@@ -33,12 +33,13 @@ package
 			trace("gestureWorksInit()");	
 			
 			var myTouchSprite:TouchSprite = new TouchSprite();
-			myTouchSprite.graphics.beginFill(0xCCCCCC);
-			myTouchSprite.graphics.drawRect(0,0,400,300);			
+			var loader:Loader = new Loader();
+			loader.load(new URLRequest("galaxy.jpg"));
+			myTouchSprite.addChild(loader);
 			addChild(myTouchSprite);			
 			
-			myTouchSprite.releaseInertia = true;
-			myTouchSprite.gestureList = { "n-drag-inertia":true, "n-scale-inertia":true, "n-rotate-inertia":true};
+			myTouchSprite.gestureList = { "n-drag-inertia":true, "n-scale-inertia":true, "n-rotate-inertia":true };
+			myTouchSprite.releaseInertia = true;			
 			myTouchSprite.nativeTransform = true;			
 		}
 
