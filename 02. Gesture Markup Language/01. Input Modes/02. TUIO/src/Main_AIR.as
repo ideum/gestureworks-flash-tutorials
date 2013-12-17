@@ -26,7 +26,7 @@ package
 									
 			//enable TUIO input
 			tuio = true; 
-			//tuio = "protocol:tcp,port:3333";
+			//tuio = "protocol:tcp,port:3000";
 			//tuio = "protocol:flosc";
 		}
 	
@@ -34,14 +34,14 @@ package
  		{
 			trace("gestureWorksInit()");	
 			
-			//default
-			var tcp:TouchSprite = new TouchSprite();
-			tcp.graphics.beginFill(0xCCCCCC);
-			tcp.graphics.drawRect(0,0,400,300);			
-			tcp.releaseInertia = true;
-			tcp.gestureList = { "n-drag-inertia":true, "n-scale-inertia":true, "n-rotate-inertia":true };
-			tcp.nativeTransform = true;
-			addChild(tcp);						
+			var myTouchSprite:TouchSprite = new TouchSprite();
+			myTouchSprite.graphics.beginFill(0xCCCCCC);
+			myTouchSprite.graphics.drawRect(0,0,400,300);			
+			addChild(myTouchSprite);						
+			
+			myTouchSprite.releaseInertia = true;
+			myTouchSprite.gestureList = { "n-drag-inertia":true, "n-scale-inertia":true, "n-rotate-inertia":true };
+			myTouchSprite.nativeTransform = true;			
 		}
 
 	}
