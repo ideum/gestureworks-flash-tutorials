@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cml tuio="false" simulator="false">
+
+<!-- horizontal line -->
+<Graphic shape="line" lineStroke="5" width="200" x="50" y="100" />
+
+<!-- vertical line -->
+<Graphic shape="line" lineStroke="5" height="200" lineColor="0xFF0000" x="300" />
+	
+<!-- diagonal line -->
+<Graphic shape="vector" width="100" height="200" lineStroke="10" lineColor="0x0000FF" x="400"/>
+
+<!-- circle -->	
+<Graphic shape="circle" radius="100" x="550" />
+
+<!-- ellipse -->	
+<Graphic shape="ellipse" width="100" height="200" x="800" />
+
+<!-- rectangle -->
+<Graphic shape="rectangle" width="200" height="200" color="0xFFF000" x="1000" />
+
+<!-- round rectangle -->
+<Graphic shape="roundRectangle" width="100" height="200" cornerWidth="20" cornerHeight="20" x="50" y="300" />
+
+<!-- Triangle -->
+<Graphic shape="triangle" color="0x00FF00" height="200" x="200" y="300"/> 
+
+<!-- Path -->
+<Graphic shape="path" fill="none" color="0xFFFFFF" lineStroke="5" lineColor="0x00FFFF" 
+	pathCommands="1,2,2,2,2" pathCoordinates="200,10, 300,110, 300,10, 200,110, 200,10"  
+	x="300" y="300" /> 
+
+</cml>	
