@@ -1,0 +1,1 @@
+FlashBuilder doesn't allow relative library linking. You must set up your own project with the correct absolute paths.
