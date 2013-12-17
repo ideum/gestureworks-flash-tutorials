@@ -33,6 +33,7 @@ package
 			ts.gestureList = { "n-drag-inertia":true, "n-scale-inertia":true, "n-rotate-inertia":true };
 			ts.nativeTransform = true;
 			ts.releaseInertia = true;
+			ts.debugDisplay = true;
 			addChild(ts);
 		}
 
