@@ -5,6 +5,7 @@ package
 	import com.gestureworks.events.GWTouchEvent;
 	import com.gestureworks.managers.Leap2DManager;
 	import com.gestureworks.managers.MotionManager;
+	import com.gestureworks.managers.TUIOManager;
 	import com.leapmotion.leap.events.LeapEvent;
 	import com.leapmotion.leap.Pointable;
 	import flash.display.Loader;
@@ -31,14 +32,14 @@ package
  		{
 			trace("gestureWorksInit()");	
 			
-			//default
-			var tcp:TouchSprite = new TouchSprite();
-			tcp.graphics.beginFill(0xCCCCCC);
-			tcp.graphics.drawRect(0,0,400,300);			
-			tcp.releaseInertia = true;
-			tcp.gestureList = { "n-drag-inertia":true, "n-scale-inertia":true, "n-rotate-inertia":true};
-			tcp.nativeTransform = true;
-			addChild(tcp);			
+			var myTouchSprite:TouchSprite = new TouchSprite();
+			myTouchSprite.graphics.beginFill(0xCCCCCC);
+			myTouchSprite.graphics.drawRect(0,0,400,300);			
+			addChild(myTouchSprite);			
+			
+			myTouchSprite.releaseInertia = true;
+			myTouchSprite.gestureList = { "n-drag-inertia":true, "n-scale-inertia":true, "n-rotate-inertia":true};
+			myTouchSprite.nativeTransform = true;			
 		}
 
 	}
