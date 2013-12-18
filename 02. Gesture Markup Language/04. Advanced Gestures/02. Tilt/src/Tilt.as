@@ -27,7 +27,7 @@ package
 			
 			// add a bitmap image to the touch sprite
 			var loader:Loader = new Loader();
-			loader.load(new URLRequest("../../../assets/gwLogo.png"));
+			loader.load(new URLRequest("../../../../assets/gwLogo.png"));
 			loader.x = -200;
 			loader.y = -200;
 			touchSprite.addChild(loader);
