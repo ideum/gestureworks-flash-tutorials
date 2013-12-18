@@ -34,7 +34,7 @@ package
 			
 			var child1:TouchSprite = new TouchSprite();
 			var loader:Loader = new Loader();
-			loader.load(new URLRequest("../../../assets/gwLogo.png"));
+			loader.load(new URLRequest("../../../../assets/gwLogo.png"));
 			child1.addChild(loader);			
 			child1.scale = .5;
 			child1.x = 50;			
@@ -57,7 +57,7 @@ package
 
 			var child2:TouchSprite = new TouchSprite();
 			var loader:Loader = new Loader();
-			loader.load(new URLRequest("../../../assets/gwLogo1.png"));
+			loader.load(new URLRequest("../../../../assets/gwLogo1.png"));
 			child2.addChild(loader);						
 			child2.scale = .5;
 			child2.x = 50;

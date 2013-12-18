@@ -71,7 +71,7 @@ package
 			logo.y = 150;
 			
 			var loader:Loader = new Loader();
-			loader.load(new URLRequest("../../../assets/" + img));
+			loader.load(new URLRequest("../../../../assets/" + img));
 			loader.y = -120;
 			loader.x = -120;
 			logo.addChild(loader);
