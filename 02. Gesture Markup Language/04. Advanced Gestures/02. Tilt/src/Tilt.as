@@ -39,7 +39,6 @@ package
 			
 			// add events 
 			touchSprite.gestureList = { "tilt":true };
-			touchSprite.nativeTransform = true;
 			
 			// add tilt handler
 			touchSprite.addEventListener(GWGestureEvent.TILT, onTilt);			
