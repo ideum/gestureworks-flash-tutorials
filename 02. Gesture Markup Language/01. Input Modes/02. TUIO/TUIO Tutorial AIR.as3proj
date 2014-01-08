@@ -54,6 +54,7 @@
   <!-- SWC Libraries -->
   <libraryPaths>
     <element path="..\..\..\..\lib\GestureWorksGML_4.0.0.swc" />
+    <element path="..\..\..\..\lib\GestureWorksGML_4.1.0.swc" />
   </libraryPaths>
   <!-- External Libraries -->
   <externalLibraryPaths>
