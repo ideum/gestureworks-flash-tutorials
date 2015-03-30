@@ -1,5 +1,6 @@
 package  
 {
+	import com.gestureworks.cml.elements.Album;
 	import com.gestureworks.cml.elements.Container;
 	import com.gestureworks.cml.elements.Graphic;
 	import com.gestureworks.cml.events.*;
@@ -15,6 +16,7 @@ package
 		private var armContainer:Container;
 		private var tweening:Boolean = false;
 		private var tween:TweenLite;
+		private var album:Album;
 		
 		public function UselessElement() {
 			super();
@@ -28,6 +30,33 @@ package
 		}
 		
 		private function onDrag(e:GWGestureEvent):void {
+			
+			var proj_drag:Object = (function(ax:Number, ay:Number, bx:Number, by:Number):void {
+				knob.x += ((ax * bx + ay * by) / (bx * bx + by * by)) * bx;
+				knob.y += ((ax * bx + ay * by) / (bx * bx + by * by)) * by;
+			})(e.value.drag_dx, e.value.drag_dy, Math.cos((parent.rotation+90)*Math.PI/180), Math.sin((parent.rotation+90)*Math.PI/180));
+
+			function rotateVector(x:Number, y:Number, rotation:Number):Object {
+				var cos_rot:Number = Math.cos(rotation);
+				var sin_rot:Number = Math.sin(rotation);
+				return {x:x * cos_rot - y * sin_rot, y:x * sin_rot + y * cos_rot};
+			}
+			
+			/*
+			trace("lkjsdf "+this.x+" "+this.y+" "+Math.random());
+			var knob_vec    : Object = rotateVector(knob.x   , knob.y   , -parent.rotation);
+			var channel_vec : Object = rotateVector(channel.x, channel.y, -parent.rotation);
+			
+			if (knob_vec.y > channel_vec.y + channel.height - 5 - knob.height)
+				knob_vec.y = channel_vec.y + channel.height - 5 - knob.height;
+			else if (knob_vec.y < channel_vec.y + 5)
+				knob_vec.y = channel_vec.y + 5;
+			if (knob_vec.y + (knob.height / 2) < channel_vec.y + (channel.height / 2))
+				startSwitch();
+			*/
+				
+			/*
+			// this only works if this.rotation.mod(2*Math.PI) == 0...
 			knob.y += e.value.drag_dy;
 			
 			if (knob.y > channel.y + channel.height - 5 - knob.height)
@@ -38,6 +67,7 @@ package
 			if (knob.y + (knob.height / 2) < channel.y + (channel.height / 2)) {
 				startSwitch();
 			}
+			*/
 		}
 		
 		private function startSwitch():void {
@@ -104,7 +134,6 @@ package
 			
 			addChild(armContainer);
 			armContainer.addChild(arm);
-			
 		}
 		
 		private function positionGraphics():void {

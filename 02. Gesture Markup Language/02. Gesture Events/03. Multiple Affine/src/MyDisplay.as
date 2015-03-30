@@ -17,7 +17,7 @@ package
 		private function init ():void {
 			
 			var ts0:TouchSprite = new TouchSprite()
-					var Loader0:Loader = new Loader();
+				var Loader0:Loader = new Loader();
 					Loader0.load(new URLRequest("library/assets/building1.jpg"));
 				ts0.addChild(Loader0);
 				ts0.x = 0;

@@ -3,6 +3,7 @@ package
 	import com.gestureworks.cml.components.Component;
 	import com.gestureworks.cml.elements.*;
 	import com.gestureworks.cml.events.*;
+	import com.gestureworks.cml.layouts.Layout;
 	
 	public class UselessViewer extends Component 
 	{		
@@ -43,16 +44,6 @@ package
 		
 		private function uselessComplete(e:StateEvent):void {
 			trace("The useless machine has done its job.");
-		}	
-					
-		override protected function updateLayout(event:*=null):void 
-		{
-			if (useless) {
-				// update width and height to the size of the useless, if not already specified
-					width = useless.width;
-					height = useless.height;	
-			}	
-			super.updateLayout();				
 		}	
 		
 		
